@@ -1,0 +1,36 @@
+{
+  "name": "generator-zurb-foundation",
+  "version": "0.1.0",
+  "description": "Yeoman generator for Zurb Foundation 4",
+  "keywords": [
+    "yeoman-generator",
+    "scaffold",
+    "foundation",
+    "rwd",
+    "zurb"
+  ],
+  "homepage": "https://github.com/bauschan/generator-zurb-foundation",
+  "bugs": "https://github.com/bauschan/generator-zurb-foundation.git/issues",
+  "author": "Peter Foerger",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bauschan/generator-zurb-foundation.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.10.3"
+  },
+  "devDependencies": {
+    "mocha": "~1.9.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "licenses": [
+    {
+      "type": "BSD"
+    }
+  ]
+}
