@@ -1,3 +1,9 @@
+## Before you begin
+
+1. Install Node (with npm): http://nodejs.org/#download
+2. Install Sass: http://sass-lang.com/download.html 
+3. Install Compass: http://compass-style.org/
+
 ## Usage
 
 - Install it (only once): `npm install -g generator-zurb-foundation`
