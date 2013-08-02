@@ -199,7 +199,7 @@ module.exports = function (grunt) {
         cssmin: {
             dist: {
                 files: {
-                    '<%%= yeoman.dist %>/styles/index.css': [
+                    '<%%= yeoman.dist %>/styles/foundation.css': [
                         '.tmp/styles/{,*/}*.css',
                         '<%%= yeoman.app %>/styles/{,*/}*.css'
                     ]
