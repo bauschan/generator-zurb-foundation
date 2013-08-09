@@ -161,11 +161,7 @@ module.exports = function (grunt) {
                     // `name` and `out` is set by grunt-usemin
                     baseUrl: 'app/scripts',
                     optimize: 'none',
-                    // TODO: Figure out how to make sourcemaps work with grunt-usemin
-                    // https://github.com/yeoman/grunt-usemin/issues/30
-                    //generateSourceMaps: true,
-                    // required to support SourceMaps
-                    // http://requirejs.org/docs/errors.html#sourcemapcomments
+                    dir: 'dist/scripts',
                     preserveLicenseComments: false,
                     useStrict: true,
                     wrap: true,
@@ -283,9 +279,7 @@ module.exports = function (grunt) {
         'requirejs',
         'imagemin',
         'htmlmin',
-        'concat',
         'cssmin',
-        'uglify',
         'copy',
         'usemin'
     ]);
