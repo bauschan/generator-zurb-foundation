@@ -242,7 +242,18 @@ module.exports = function (grunt) {
             all: {
                 rjsConfig: '<%%= yeoman.app %>/scripts/main.js'
             }
-        }
+        },
+        dalek: {
+            options: {
+               htmlReporter: true,
+               logLevel: 2,
+               noColors: false,
+               noSymbols: false
+             },
+             dist: {
+               src: ['uat/dalekjs-tests.js']
+             }
+           }
     });
 
     grunt.renameTask('regarde', 'watch');
@@ -287,5 +298,12 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'test',
         'build'
+    ]);
+    grunt.registerTask('dalekjs', [
+        'clean:server',
+        'coffee',
+        'compass',
+        'connect:test',
+        'dalek'
     ]);
 };

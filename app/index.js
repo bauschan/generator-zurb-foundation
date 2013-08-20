@@ -43,6 +43,11 @@ Generator.prototype.editorConfig = function editorConfig() {
   this.copy('editorconfig', '.editorconfig');
 };
 
+Generator.prototype.uat = function uat() {
+  this.mkdir('uat');
+  this.copy('_dalekjs-tests.js', 'uat/dalekjs-tests.js');
+};
+
 Generator.prototype.gruntfile = function gruntfile() {
   this.template('Gruntfile.js');
 };
