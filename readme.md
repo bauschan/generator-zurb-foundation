@@ -14,6 +14,8 @@
 
 - Run `grunt` to build and `grunt server` to preview
 
+- Run `grunt dalek` to execute cross browser tests with [dalekjs](http://dalekjs.com/)
+
 
 
 ## Options
