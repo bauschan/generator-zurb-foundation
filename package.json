@@ -24,7 +24,7 @@
     "yeoman-generator": "~0.13.0"
   },
   "peerDependencies": {
-    "bower": "~0.x",
+    "bower": ">=1.0.0",
     "dalek-cli": "~0.0.1",
     "dalekjs": "~0.0.1"
   },
