@@ -4,33 +4,33 @@
 $include-html-joyride-classes: $include-html-classes !default;
 
 // Controlling default Joyride styles
-$joyride-tip-bg:              rgb(0,0,0) !default;
-$joyride-tip-default-width:   300px !default;
-$joyride-tip-padding:         emCalc(18px) emCalc(20px) emCalc(24px) !default;
-$joyride-tip-border:          solid 1px #555 !default;
-$joyride-tip-radius:          4px !default;
+$joyride-tip-bg: rgb(0,0,0) !default;
+$joyride-tip-default-width: 300px !default;
+$joyride-tip-padding: em-calc(18 20 24) !default;
+$joyride-tip-border: solid 1px #555 !default;
+$joyride-tip-radius: 4px !default;
 $joyride-tip-position-offset: 22px !default;
 
 // Here, we're setting the tip dont styles
-$joyride-tip-font-color:      #fff !default;
-$joyride-tip-font-size:       emCalc(14px) !default;
-$joyride-tip-header-weight:   bold !default;
+$joyride-tip-font-color: #fff !default;
+$joyride-tip-font-size: em-calc(14) !default;
+$joyride-tip-header-weight: bold !default;
 
 // This changes the nub size
-$joyride-tip-nub-size:        14px !default;
+$joyride-tip-nub-size: 14px !default;
 
 // This adjusts the styles for the timer when its enabled
-$joyride-tip-timer-width:     50px !default;
-$joyride-tip-timer-height:    3px !default;
-$joyride-tip-timer-color:     #666 !default;
+$joyride-tip-timer-width: 50px !default;
+$joyride-tip-timer-height: 3px !default;
+$joyride-tip-timer-color: #666 !default;
 
 // This changes up the styles for the close button
-$joyride-tip-close-color:     #777 !default;
-$joyride-tip-close-size:      30px !default;
-$joyride-tip-close-weight:    normal !default;
+$joyride-tip-close-color: #777 !default;
+$joyride-tip-close-size: 30px !default;
+$joyride-tip-close-weight: normal !default;
 
 // When Joyride is filling the screen, we use this style for the bg
-$joyride-screenfill:          rgba(0,0,0,0.5) !default;
+$joyride-screenfill: rgba(0,0,0,0.5) !default;
 
 
 // We decided not to make a mixin for this because it relies on predefined classes to work properly.
@@ -39,7 +39,7 @@ $joyride-screenfill:          rgba(0,0,0,0.5) !default;
 
   /* Foundation Joyride */
   .joyride-list { display: none; }
-  
+
   /* Default styles for the container */
   .joyride-tip-guide {
     display: none;
@@ -53,21 +53,21 @@ $joyride-screenfill:          rgba(0,0,0,0.5) !default;
     font-weight: normal;
     width: 95%;
   }
-  
+
   .lt-ie9 .joyride-tip-guide {
     max-width:800px;
     #{$default-float}: 50%;
     margin-#{$default-float}:-400px;
   }
-  
+
   .joyride-content-wrapper {
     width: 100%;
-  
+
     padding: $joyride-tip-padding;
-  
+
     .button { margin-bottom: 0 !important; }
   }
-  
+
   /* Add a little css triangle pip, older browser just miss out on the fanciness of it */
   .joyride-tip-guide {
     .joyride-nub {
@@ -77,7 +77,7 @@ $joyride-screenfill:          rgba(0,0,0,0.5) !default;
       width: 0;
       height: 0;
       border: inset $joyride-tip-nub-size;
-  
+
       &.top {
         border-top-style: solid;
         border-color: $joyride-tip-bg;
@@ -94,12 +94,12 @@ $joyride-screenfill:          rgba(0,0,0,0.5) !default;
         border-#{$opposite-direction}-color: transparent !important;
         bottom: -($joyride-tip-nub-size*2);
       }
-  
+
       &.right { right: -($joyride-tip-nub-size*2); }
       &.left { left: -($joyride-tip-nub-size*2); }
     }
   }
-  
+
   /* Typography */
   .joyride-tip-guide h1,
   .joyride-tip-guide h2,
@@ -113,18 +113,18 @@ $joyride-screenfill:          rgba(0,0,0,0.5) !default;
     color: $joyride-tip-font-color;
   }
   .joyride-tip-guide p {
-    margin: 0 0 emCalc(18px) 0;
+    margin: em-calc(0 0 18 0);
     font-size: $joyride-tip-font-size;
     line-height: 1.3;
   }
-  
+
   .joyride-timer-indicator-wrap {
     width: $joyride-tip-timer-width;
     height: $joyride-tip-timer-height;
     border: $joyride-tip-border;
     position: absolute;
-    #{$opposite-direction}: emCalc(17px);
-    bottom: emCalc(16px);
+    #{$opposite-direction}: em-calc(17);
+    bottom: em-calc(16);
   }
   .joyride-timer-indicator {
     display: block;
@@ -132,7 +132,7 @@ $joyride-screenfill:          rgba(0,0,0,0.5) !default;
     height: inherit;
     background: $joyride-tip-timer-color;
   }
-  
+
   .joyride-close-tip {
     position: absolute;
     #{$opposite-direction}: 12px;
@@ -142,11 +142,11 @@ $joyride-screenfill:          rgba(0,0,0,0.5) !default;
     font-size: $joyride-tip-close-size;
     font-weight: $joyride-tip-close-weight;
     line-height: .5 !important;
-  
+
     &:hover,
     &:focus { color: #eee !important; }
   }
-  
+
   .joyride-modal-bg {
     position: fixed;
     height: 100%;
@@ -157,29 +157,31 @@ $joyride-screenfill:          rgba(0,0,0,0.5) !default;
     display: none;
     top: 0;
     #{$default-float}: 0;
-    cursor: pointer;
+    cursor: $cursor-pointer-value;
   }
-  
+
   .joyride-expose-wrapper {
     background-color: #ffffff;
     position: absolute;
     border-radius: 3px;
     z-index: 102;
-    -moz-box-shadow: 0px 0px 30px #ffffff;
-    -webkit-box-shadow: 0px 0px 15px #ffffff;
-    box-shadow: 0px 0px 15px #ffffff;
+    @if $experimental {
+      -moz-box-shadow: 0 0 30px #ffffff;
+      -webkit-box-shadow: 0 0 15px #ffffff;
+    }
+    box-shadow: 0 0 15px #ffffff;
   }
-  
+
   .joyride-expose-cover {
     background: transparent;
     border-radius: 3px;
     position: absolute;
     z-index: 9999;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
   }
-  
-  
+
+
   /* Styles for screens that are atleast 768px; */
   @media #{$small} {
     .joyride-tip-guide { width: $joyride-tip-default-width; #{$default-float}: inherit;
