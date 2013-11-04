@@ -4,27 +4,27 @@
 $include-html-clearing-classes: $include-html-classes !default;
 
 // We use these to set the background colors for parts of Clearing.
-$clearing-bg:                           #111 !default;
-$clearing-caption-bg:                   $clearing-bg !default;
-$clearing-carousel-bg:                  #111 !default;
-$clearing-img-bg:                       $clearing-bg !default;
+$clearing-bg: #111 !default;
+$clearing-caption-bg: $clearing-bg !default;
+$clearing-carousel-bg: #111 !default;
+$clearing-img-bg: $clearing-bg !default;
 
 // We use these to style the close button
-$clearing-close-color:                  #fff !default;
-$clearing-close-size:                   40px !default;
+$clearing-close-color: #fff !default;
+$clearing-close-size: 40px !default;
 
 // We use these to style the arrows
-$clearing-arrow-size:                   16px !default;
-$clearing-arrow-color:                  $clearing-close-color !default;
+$clearing-arrow-size: 16px !default;
+$clearing-arrow-color: $clearing-close-color !default;
 
 // We use these to style captions
-$clearing-caption-font-color:           #fff !default;
-$clearing-caption-padding:              10px 30px !default;
+$clearing-caption-font-color: #fff !default;
+$clearing-caption-padding: 10px 30px !default;
 
 // We use these to make the image and carousel height and style
-$clearing-active-img-height:            75% !default;
-$clearing-carousel-height:              150px !default;
-$clearing-carousel-thumb-width:         175px !default;
+$clearing-active-img-height: 75% !default;
+$clearing-carousel-height: 150px !default;
+$clearing-carousel-thumb-width: 175px !default;
 $clearing-carousel-thumb-active-border: 4px solid rgb(255,255,255) !default;
 
 @if $include-html-clearing-classes {
@@ -36,6 +36,7 @@ $clearing-carousel-thumb-active-border: 4px solid rgb(255,255,255) !default;
   [data-clearing] {
     @include clearfix;
     margin-bottom: 0;
+    margin-#{$default-float}: 0;
     list-style: none;
 
     li {
@@ -109,11 +110,11 @@ $clearing-carousel-thumb-active-border: 4px solid rgb(255,255,255) !default;
   }
 
   // If you want to show a lightbox, but only have a single image come through as the thumbnail
-  .clearing-feature li { 
+  .clearing-feature li {
     display: none;
     &.clearing-featured-img {
       display: block;
-    } 
+    }
   }
 
   // Large screen overrides
@@ -177,7 +178,7 @@ $clearing-carousel-thumb-active-border: 4px solid rgb(255,255,255) !default;
             overflow: hidden;
             margin-#{$opposite-direction}: 1px;
             position: relative;
-            cursor: pointer;
+            cursor: $cursor-pointer-value;
             opacity: 0.4;
 
             &.fix-height {
@@ -190,13 +191,15 @@ $clearing-carousel-thumb-active-border: 4px solid rgb(255,255,255) !default;
 
             a.th {
               border: none;
-              -webkit-box-shadow: none;
+              @if $experimental {
+                -webkit-box-shadow: none;
+              }
                       box-shadow: none;
               display: block;
             }
 
             img {
-              cursor: pointer !important;
+            cursor: $cursor-pointer-value !important;
               min-width: 100% !important;
             }
 
