@@ -1,6 +1,6 @@
 {
   "name": "generator-zurb-foundation",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Yeoman generator for Zurb Foundation 4.3.2",
   "keywords": [
     "yeoman-generator",
@@ -21,7 +21,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "yeoman-generator": "~0.13.0"
+    "yeoman-generator": ">=0.14.0"
   },
   "peerDependencies": {
     "bower": ">=1.0.0",
@@ -29,7 +29,7 @@
     "dalekjs": ">=0.0.8"
   },
   "devDependencies": {
-    "mocha": "~1.12.0"
+    "mocha": ">=1.14.0"
   },
   "engines": {
     "node": ">=0.8.0",

@@ -1,3 +1,7 @@
+[![NPM](https://nodei.co/npm/generator-zurb-foundation.png?downloads=true&stars=true)](https://nodei.co/npm/generator-zurb-foundation/)
+[![NPM version](https://badge.fury.io/js/generator-zurb-foundation.png)](http://badge.fury.io/js/generator-zurb-foundation)
+[![Dependency Status](https://david-dm.org/bauschan/generator-zurb-foundation.png)](https://david-dm.org/bauschan/generator-zurb-foundation)
+
 ## Before you begin
 
 1. Install Node (with npm): http://nodejs.org/#download
